@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public class StreamHomework {
 
-    // Завдання 1
+    // завдання 1
     public static String oddIndexedNames(List<String> names) {
         return IntStream.range(0, names.size())
                 .filter(i -> i % 2 == 1)
@@ -17,7 +17,7 @@ public class StreamHomework {
                 .collect(Collectors.joining(", "));
     }
 
-    // Завдання 2
+    // завдання 2
     public static List<String> upperCaseSortedDesc(List<String> strings) {
         return strings.stream()
                 .map(String::toUpperCase)
@@ -25,7 +25,7 @@ public class StreamHomework {
                 .collect(Collectors.toList());
     }
 
-    // Завдання 3
+    // завдання 3
     public static String sortedNumbers(String[] array) {
         return Arrays.stream(array)
                 .flatMap(s -> Arrays.stream(s.split(", ")))
@@ -35,12 +35,12 @@ public class StreamHomework {
                 .collect(Collectors.joining(", "));
     }
 
-    // Завдання 4
+    // завдання 4
     public static Stream<Long> randomStream(long seed, long a, long c, long m) {
         return Stream.iterate(seed, x -> Math.floorMod(a * x + c, m));
     }
 
-    // Завдання 5
+    // завдання 5
     public static <T> Stream<T> zip(Stream<T> first, Stream<T> second) {
         Iterator<T> it1 = first.iterator();
         Iterator<T> it2 = second.iterator();
